@@ -24,7 +24,7 @@ const app = new express();
 //   throw error;
 // }
 app.get("/", (req, resp) => {
-  resp.send("I must run.");
+  resp.send("I must run it properly.");
 });
 
 app.listen(process.env.PORT, (err) => {
