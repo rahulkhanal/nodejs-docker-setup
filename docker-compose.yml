@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: your_postgres_user
+      POSTGRES_PASSWORD: your_postgres_password
+      POSTGRES_DB: your_postgres_database
+    ports:
+      - "5432:5432"
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  nodeapp:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+      - postgres
+      - mongodb
