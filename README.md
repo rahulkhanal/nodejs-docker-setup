@@ -1,10 +1,20 @@
-step 1: create image
-=> docker build -t image_name .
+# Docker Hub
+ > Pull the image from Docker Hub
 
-step 2: run it in port
-=> docker run -p 8000:8000 -d --name container_name image_name# nodejs-docker-setup
+```bash
+docker pull node:16
+```
 
-step 3: changes made in files
-=> docker stop democontainer
-=> docker rm democontainer
-=> docker run -p 8000:8000 -d --name democontainer demo
+# Docker Build
+ > Build the image from the Dockerfile
+
+```bash
+docker build -t nodeapp .
+```
+
+# Docker Run
+ > Run the image
+
+```bash
+docker run -p 3000:3000 -d nodeapp
+```
