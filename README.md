@@ -19,6 +19,12 @@ docker run -it <image-name>
 -p : publish a container’s port(s) to the host
 --name : give a name to the container
 
+# Docker Container
+
+ > Start the container
+```bash
+docker start <container-name>
+```
  > Stop the container
 ```bash
 docker stop <container-name>
