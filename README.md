@@ -23,3 +23,15 @@ docker run -it <image-name>
 ```bash
 docker stop <container-name>
 ```
+ > Show all the containers
+```bash
+docker ps
+docker ps -a
+```
+-a : show all containers (running and stopped)
+without -a : show only running containers
+
+ > Remove the container
+```bash
+docker rm <container-name>
+```
